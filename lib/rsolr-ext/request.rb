@@ -18,6 +18,10 @@ module RSolr::Ext::Request
         output[:start] = page * output[:rows]
       end
       
+      if sort_option = input.delete(:sort)
+        output[:sort] = sort_option
+      end
+
       # remove the input :q params
       output[:q] = input.delete :q
       output[:fq] = input.delete(:fq) if input[:fq]
