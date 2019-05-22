@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
   s.autorequire = 'rsolr-ext'
-  s.version = "1.1.0"
+  s.version = "1.1.1"
 
   s.add_dependency 'rsolr', ">= 1.0.1"
   s.add_development_dependency 'rake', '~> 0.9.2'
